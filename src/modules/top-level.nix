@@ -42,6 +42,7 @@ in
     ./scripts.nix
     ./processes.nix
     ./update-check.nix
+    ./jupyterWith.nix
   ] ++ map (name: ./. + "/languages/${name}") (builtins.attrNames (builtins.readDir ./languages));
 
   config = {

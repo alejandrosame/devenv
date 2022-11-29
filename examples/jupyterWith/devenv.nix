@@ -1,0 +1,5 @@
+{ ... }:
+
+{
+  jupyterWith.enable = true;
+}
