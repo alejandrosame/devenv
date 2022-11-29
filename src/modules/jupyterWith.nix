@@ -18,13 +18,11 @@ in
     package =
       let
         inherit (jupyterWith.packages.${pkgs.system}) jupyterlab jupyterlab-all-example-kernels;
-        inherit (jupyterWith.lib.${pkgs.system}) mkJupyterlab;
-        jl = mkJupyterlab { };
       in
       lib.mkOption {
         type = types.package;
         description = "Which jupyterlab to use";
-        default = jl;
+        default = jupyterlab;
         defaultText = "jupyterlab";
       };
   };
